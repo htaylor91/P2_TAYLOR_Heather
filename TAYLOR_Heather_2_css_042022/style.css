@@ -1,0 +1,38 @@
+/*media query breakpoints
+desktop 992px
+tablette 768px
+mobile <762px 
+*/
+
+/*desktop first*/
+
+/*Flexbox, pas Grid*/
+
+/*pixels et pourcentages - pas de REM et EM*/
+
+* {
+    box-sizing: border-box;
+  }
+
+:root {
+  --blue: #0065FC;
+  --clearblue: #DEEBFF;
+  --gray: #F2F2F2;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+/*tests*/
+h1 {
+  color: var(--blue);
+}
+
+p {
+    font-style: italic;
+}
+
+.strong {
+  font-weight: bold;
+}
