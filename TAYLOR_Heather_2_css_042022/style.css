@@ -5,11 +5,8 @@ mobile <762px
 */
 
 /*desktop first*/
-
 /*Flexbox, pas Grid*/
-
 /*pixels et pourcentages - pas de REM et EM*/
-
 * {
     box-sizing: border-box;
   }
@@ -22,17 +19,26 @@ mobile <762px
 
 body {
   font-family: 'Raleway', sans-serif;
+  margin: 0;
 }
 
-/*tests*/
-h1 {
-  color: var(--blue);
+/* HEADER */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-p {
-    font-style: italic;
+nav img {
+  margin-left: 20px;
 }
 
-.strong {
-  font-weight: bold;
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin: 0 20px 0 20px;
 }
