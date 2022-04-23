@@ -45,6 +45,53 @@ nav li a:link {
 
 /* Main */
 
+h2 {
+  font-weight: bold;
+}
+
+h3 {
+  font-weight: bolder;
+  font-size: small;
+}
+
+h4 {
+  font-weight: normal;
+  font-size: smaller;
+}
+
+/* Section: Hébergements à Marseille */
+
+.housing-section {
+  background-color: #F2F2F2;
+}
+
+.housing-cards {
+  display: flex;
+}
+
+.card {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  border: 5px white solid;
+  margin: 1%;
+  width: 250px;
+}
+
+.card-image {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 15px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.card-body {
+  padding: 1% 2%;
+}
+
 
 /* Footer */
 
@@ -60,6 +107,10 @@ breakpoint tablette: 768px /// 768px to 991px
   nav {
     flex-direction: column;
   }
+
+  .housing-cards {
+    flex-direction: column;
+  }
 }
 
 /*
@@ -67,6 +118,10 @@ breakpoint mobile: <768px /// 0px to 767px
 */
 @media (max-width: 767px) {
   nav {
+    flex-direction: column;
+  }
+
+  .housing-cards {
     flex-direction: column;
   }
 }
