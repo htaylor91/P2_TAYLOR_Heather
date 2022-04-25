@@ -45,43 +45,80 @@ nav li a:link {
 
 /* Main */
 
+h1 {
+  font-size: small;
+}
+
 h2 {
   font-weight: bold;
+  font-size: small;
 }
 
 h3 {
   font-weight: bolder;
-  font-size: small;
+  font-size: xx-small;
+  margin: 0%;
 }
 
 h4 {
   font-weight: normal;
-  font-size: smaller;
+  font-size: xx-small;
+  margin: 0%;
+}
+
+p {
+  font-size: xx-small;
+}
+
+/* Section: Hébergements à Marseille et Les plus populaires */
+
+.housing-and-popular-section {
+  display: flex;
 }
 
 /* Section: Hébergements à Marseille */
+.housing-section, .popular-section {
+  background-color: #F2F2F2;
+  border-radius: 30px;
+  display: flex;
+  border: 15px white solid;
+}
 
 .housing-section {
-  background-color: #F2F2F2;
+  flex: 2;
+  flex-direction: column;
+}
+
+.popular-section {
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  /*padding: 10px;*/
+}
+
+.housing-cards-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .housing-cards {
   display: flex;
+  flex-direction: row;
 }
 
 .card {
   background-color: white;
-  display: flex;
-  flex-direction: column;
   border-radius: 15px;
   border: 5px white solid;
-  margin: 1%;
-  width: 250px;
+  flex: 1;
+  width: 163px;
+  margin: 2%;
 }
 
 .card-image {
   width: 100%;
-  height: 100px;
+  height: 79px;
   object-fit: cover;
   border-radius: 15px;
   border-bottom-right-radius: 0px;
@@ -92,7 +129,46 @@ h4 {
   padding: 1% 2%;
 }
 
+#show-more {
+  /*afficher plus*/
+}
 
+/* Section: Les plus populaires */
+
+.popular-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5%;
+}
+
+.card-popular {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  border-radius: 15px;
+  border: 5px white solid;
+  height: 100px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.card-image-popular {
+  height: 100%;
+  width: 40%;
+  object-fit: cover;
+  border-radius: 15px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+
+}
+
+.card-body-popular {
+  padding: 1% 2%;
+  height: 100%;
+}
+
+/* Section: Activités à Marseille */
 /* Footer */
 
 /*breakpoint desktop: 992px /// 992px & above - all rules outside of media queries*/
@@ -103,7 +179,7 @@ Media queries
 /*
 breakpoint tablette: 768px /// 768px to 991px
 */
-@media (max-width: 991px) {	
+/*@media (max-width: 991px) {	
   nav {
     flex-direction: column;
   }
@@ -111,7 +187,7 @@ breakpoint tablette: 768px /// 768px to 991px
   .housing-cards {
     flex-direction: column;
   }
-}
+}*/
 
 /*
 breakpoint mobile: <768px /// 0px to 767px
@@ -122,6 +198,11 @@ breakpoint mobile: <768px /// 0px to 767px
   }
 
   .housing-cards {
+    flex-direction: column;
+  }
+
+  .housing-and-popular-section {
+
     flex-direction: column;
   }
 }
