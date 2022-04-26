@@ -3,6 +3,8 @@
 /*pixels et pourcentages - pas de REM et EM*/
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
 
 :root {
@@ -26,21 +28,26 @@ nav {
 }
 
 nav img {
-  /*edit logo image*/
+  padding-left: 0px;
 }
 
 nav ul {
   display: flex;
   list-style: none;
-  justify-content: space-between;
+  padding: 0%;
 }
 
 nav li {
-  margin: 0 10px 0 10px;
+  border-top: 5px solid #0065FC;
+  padding: 0 20px 0 20px;
 }
 
 nav li a:link {
   text-decoration: none;
+}
+
+nav li a:visited {
+  color: #0065FC;
 }
 
 /* Main */
@@ -69,11 +76,7 @@ h4 {
 }
 
 p {
-  font-size: xx-small;
-}
-
-.filter-section > p {
-  font-weight: 900;
+  font-size: x-small;
 }
 
 /* Icons */
@@ -97,6 +100,43 @@ p {
 .unchecked-star {
   color:#F2F2F2;
 }
+
+/* Section: Trouvez votre hébergement pour des vacances de rêve */
+
+/* Form */
+
+form button {
+  background-color:#0065FC;
+  color: white;
+}
+
+/* Filters */
+
+.filter-section {
+  display: flex;
+  padding: 10px;
+}
+
+.filter-section > p {
+  font-weight: 900;
+  font-size: small;
+  margin-right: 30px;
+}
+
+.filter-icons  {
+  display: flex;
+  justify-content: space-around;
+}
+
+.filter-icons i {
+  margin-right: 10px;
+}
+
+.filter-icons > p {
+  font-size: small;
+  margin-right: 30px;
+}
+
 
 /* Section: Hébergements à Marseille et Les plus populaires */
 
@@ -239,8 +279,12 @@ breakpoint tablette: 768px /// 768px to 991px
     flex-direction: column;
   }
 
+  nav img {
+    padding-left: 71.625px;
+  }
+
   .housing-and-popular-section {
-    flex-direction: column; 
+    flex-direction: row;
   }
   
   .housing-section {
@@ -266,6 +310,10 @@ breakpoint mobile: <768px /// 0px to 767px
 @media (max-width: 767px) {
   nav {
     flex-direction: column;
+  }
+
+  nav img {
+    padding-left: 71.625px;
   }
 
   .housing-and-popular-section {
