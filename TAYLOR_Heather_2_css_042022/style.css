@@ -45,6 +45,8 @@ nav li a:link {
 
 /* Main */
 
+/* Fonts */
+
 h1 {
   font-size: small;
 }
@@ -70,13 +72,38 @@ p {
   font-size: xx-small;
 }
 
+.filter-section > p {
+  font-weight: 900;
+}
+
+/* Icons */
+
+.blue-icon {
+  color:#0065FC;
+}
+
+.filter-icons > p {
+  font-weight: 900;
+}
+
+.fa-star {
+  font-size: 10px;
+}
+
+.checked-star {
+  color:#0065FC;
+}
+
+.unchecked-star {
+  color:#F2F2F2;
+}
+
 /* Section: Hébergements à Marseille et Les plus populaires */
 
 .housing-and-popular-section {
   display: flex;
 }
 
-/* Section: Hébergements à Marseille */
 .housing-section, .popular-section {
   background-color: #F2F2F2;
   border-radius: 30px;
@@ -93,7 +120,12 @@ p {
   flex: 1;
   flex-direction: column;
   align-items: center;
-  /*padding: 10px;*/
+}
+
+/* Section: Hébergements à Marseille */
+
+.housing-section-padding {
+  padding: 2.5%;
 }
 
 .housing-cards-container {
@@ -135,10 +167,26 @@ p {
 
 /* Section: Les plus populaires */
 
+#popular-heading {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  width: 100%;
+  padding: 5% 5% 0% 5%;
+}
+
+#popular-heading > .fa-star {
+  font-size: 20px;
+  margin-left: auto;
+}
+
+#popular-heading > h2 {
+  margin-right: auto;
+}
+
 .popular-cards {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   padding: 5%;
 }
 
@@ -166,6 +214,12 @@ p {
 .card-body-popular {
   padding: 1% 2%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body-popular > span {
+  margin-top: auto;
 }
 
 /* Section: Activités à Marseille */
@@ -179,15 +233,32 @@ Media queries
 /*
 breakpoint tablette: 768px /// 768px to 991px
 */
-/*@media (max-width: 991px) {	
+
+@media (min-width: 768px) and (max-width: 991px) {	
   nav {
     flex-direction: column;
   }
 
-  .housing-cards {
-    flex-direction: column;
+  .housing-and-popular-section {
+    flex-direction: column; 
   }
-}*/
+  
+  .housing-section {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+  }
+    
+  .popular-section {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .housing-cards {
+    flex-direction: row;
+  }
+}
 
 /*
 breakpoint mobile: <768px /// 0px to 767px
@@ -197,12 +268,27 @@ breakpoint mobile: <768px /// 0px to 767px
     flex-direction: column;
   }
 
-  .housing-cards {
+  .housing-and-popular-section {
     flex-direction: column;
   }
 
-  .housing-and-popular-section {
-
+  .housing-section {
+    flex: 1;
     flex-direction: column;
+  }
+    
+  .popular-section {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .housing-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
   }
 }
