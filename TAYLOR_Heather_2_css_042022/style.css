@@ -24,17 +24,28 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 10px 10px 10px;
+  padding: 0px 10px 0px 10px;
 }
 
-nav img {
+.logo-container {
   display: flex;
   padding-left: 0px;
-  width: 75px;
-  height: 100%;
+  padding-top: 5px;
+  margin-top: auto;
+  margin-left: 70px; /*need to change this in media query for other sizes*/
+  background-color: white;
+  width: 65px;
+  height: 35px;
 }
 
-/* Menu */
+.logo {
+  width: 100px;
+  height: 47px;
+  object-fit: cover;
+  object-position: 0px -5px; /*the negative moves the logo text up*/
+}
+
+/* Header --> Menu */
 
 nav ul {
   display: flex;
@@ -43,7 +54,7 @@ nav ul {
 }
 
 nav ul li {
-  padding: 25px 25px 0px 25px;
+  padding: 50px 25px 0px 25px;
 }
 
 .activities-link {
@@ -52,6 +63,7 @@ nav ul li {
 
 nav li a:link {
   text-decoration: none;
+  color: black;
 }
 
 nav li a:visited {
@@ -79,11 +91,16 @@ nav li:active {
 
 /* Main */
 
+main {
+  padding: 0px 35px;
+}
+
 /* Fonts */
 
 h1 {
-  font-weight: 650;
-  font-size: 24px;
+  font-weight: 625;
+  font-size: 22px;
+  margin: 0 0 8px 0;
 }
 
 h2 {
@@ -124,30 +141,61 @@ p {
 /* Section: Trouvez votre hébergement pour des vacances de rêve */
 
 .search-section {
+  margin-top: 50px;
   margin-left: 20px;
 }
 
 /* Form */
 
-form i {
+form {
+  margin: 20px 0;
+}
+
+.map-icon {
+  font-size: 18px;
   background-color: #F2F2F2;
+  padding: 12.5px 16px 13px 16px;
+  border: none;
+  border-radius: 14px 0 0 14px;
+  text-align: center;
 }
 
 form input {
-  border: 1px;
-  border-style: solid;
-  border-color: #F2F2F2 #0065FC #F2F2F2 #F2F2F2;
+  position: relative;
+  right: 5px;
+  font-size: 18px;
+  background-color: white;
+  border-top: 1px solid #F2F2F2;
+  border-bottom: 1px solid #F2F2F2;
+  border-right: none;
+  border-left: none;
+  padding: 12px;
 }
 
 form ::placeholder {
   color: black;
   font-weight: 900;
-  font-size: small;
+  font-size: 18px;
 }
 
-form button {
+.desktop-button, .mobile-button {
+  position: relative;
+  right: 10px;
   background-color:#0065FC;
   color: white;
+  font-weight: 600;
+  font-size: 18px;
+  border: none;
+  border-radius: 0 14px 14px 0;
+  padding: 13px;
+}
+
+.mobile-button {
+  display: none;
+  right: 20px;
+  font-size: 18px;
+  border-radius: 14px;
+  padding: 13px;
 }
 
 /* Filters */
@@ -161,7 +209,7 @@ form button {
 /*styles the word "filtres*/
 .filter-heading {
   font-weight: 900;
-  font-size: 16px;
+  font-size: 18px;
   margin-right: 25px;
 }
 
@@ -169,7 +217,6 @@ form button {
 .filter-buttons-container {
   display: flex;
   justify-content: space-around;
-
 }
 
 /*filter button serves as container for icon and text combined*/
@@ -189,19 +236,19 @@ form button {
 }
 
 .filter-button:hover {
-  background: #0065FC;
+  background: #DEEBFF;
 }
 
 .filter-button:active {
-  background: green;
+  background: #0065FC;
 }
 
 .circle {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50px;
-  width: 50px;
+  height: 45px;
+  width: 45px;
   overflow: visible;
   background: #DEEBFF;
   border: 2px solid #DEEBFF;
@@ -222,12 +269,36 @@ form button {
   height: 100%; /*centering text*/
 }
 
+.filter-button-text:active {
+  color: white;
+}
+
 .filter-button-text > p {
   font-size: 18px; /*changes button text size*/
 }
 
+.results-container {
+  display: flex;
+  padding: 10px 0;
+  margin: 15px 0;
+}
+
+.results-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0065FC;
+  font-size: 10px;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+}
+
 .results-message {
   display: flex;
+  align-items: center;
+  margin-left: 10px;
 }
 
 /* Section: Hébergements à Marseille et Les plus populaires */
@@ -367,38 +438,31 @@ breakpoint tablette: 768px /// 768px to 991px
 */
 
 @media (min-width: 768px) and (max-width: 991px) {	
-  nav {
+  main {
+    padding: 0px 0px;
+  }
+
+  .desktop-button {
+    display: none;
+  }
+
+  .mobile-button {
+    display: inline-flex;
+  }
+
+  .filter-section {
     flex-direction: column;
+    align-items: flex-start;
   }
 
-  nav img {
-    margin-left: 28.125px;
+  .filter-buttons-container {
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 
-  nav ul li {
-    padding: 25px 25px 5px 25px;
-  }
-
-  .activities-link {
-    padding: 0 15px;
-  }
-
-  nav li {
-    border-top: none;
-    border-bottom: 3px solid #F2F2F2;
-    padding: 0 20px 0 20px;
-  }
-
-  nav li:hover {
-    color: #0065FC;
-    border-top: none;
-    border-bottom: 3px solid #0065FC;
-  }
-  
-  nav li:active {
-    color: #0065FC;
-    border-top: none;
-    border-bottom: 3px solid #0065FC;
+  .filter-button {
+    margin-right: 10px;
+    margin-top: 10px;
   }
 
   .housing-and-popular-section {
@@ -433,10 +497,17 @@ breakpoint mobile: <768px /// 0px to 767px
 @media (max-width: 767px) {
   nav {
     flex-direction: column;
+    align-items: center;
   }
 
-  nav img {
-    margin-left: 28.125px;
+  .logo-container {
+    padding-top: 15px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }
+
+  .logo {
+    margin-left: 0px;
   }
 
   nav ul li {
@@ -444,7 +515,7 @@ breakpoint mobile: <768px /// 0px to 767px
   }
 
   .activities-link {
-    padding: 0 15px;
+    padding: 0 25px;
   }
 
   nav li {
@@ -465,6 +536,33 @@ breakpoint mobile: <768px /// 0px to 767px
     border-bottom: 3px solid #0065FC;
   }
 
+  main {
+    padding: 0px 0px;
+  }
+
+  .desktop-button {
+    display: none;
+  }
+
+  .mobile-button {
+    display: inline-flex;
+  }
+
+  .filter-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filter-buttons-container {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .filter-button {
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+  
   .housing-and-popular-section {
     flex-direction: column;
   }
