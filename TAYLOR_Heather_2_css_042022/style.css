@@ -24,22 +24,30 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 10px 10px 10px;
+  padding: 0px 10px 10px 10px;
 }
 
 nav img {
+  display: flex;
   padding-left: 0px;
+  width: 75px;
+  height: 100%;
 }
+
+/* Menu */
 
 nav ul {
   display: flex;
   list-style: none;
-  padding: 0%;
+  margin-bottom: auto;
 }
 
-nav li {
-  border-top: 5px solid #0065FC;
-  padding: 0 20px 0 20px;
+nav ul li {
+  padding: 25px 25px 0px 25px;
+}
+
+.activities-link {
+  padding: 0 15px;
 }
 
 nav li a:link {
@@ -47,47 +55,59 @@ nav li a:link {
 }
 
 nav li a:visited {
+  color: black;
+}
+
+nav li a:hover {
   color: #0065FC;
 }
+
+nav li a:active {
+  color:#0065FC;
+}
+
+nav li:hover {
+  color: #0065FC;
+  border-top: 3px solid #0065FC;
+}
+
+nav li:active {
+  color: #0065FC;
+  border-top: 3px solid #0065FC;
+}
+
 
 /* Main */
 
 /* Fonts */
 
 h1 {
-  font-size: small;
+  font-weight: 650;
+  font-size: 24px;
 }
 
 h2 {
   font-weight: bold;
-  font-size: small;
+  font-size: 18px;
 }
 
 h3 {
   font-weight: bolder;
-  font-size: xx-small;
+  font-size: 14px;
   margin: 0%;
 }
 
 h4 {
   font-weight: normal;
-  font-size: xx-small;
+  font-size: 14px;
   margin: 0%;
 }
 
 p {
-  font-size: x-small;
+  font-size: 16px;
 }
 
 /* Icons */
-
-.blue-icon {
-  color:#0065FC;
-}
-
-.filter-icons > p {
-  font-weight: 900;
-}
 
 .fa-star {
   font-size: 10px;
@@ -103,7 +123,27 @@ p {
 
 /* Section: Trouvez votre hébergement pour des vacances de rêve */
 
+.search-section {
+  margin-left: 20px;
+}
+
 /* Form */
+
+form i {
+  background-color: #F2F2F2;
+}
+
+form input {
+  border: 1px;
+  border-style: solid;
+  border-color: #F2F2F2 #0065FC #F2F2F2 #F2F2F2;
+}
+
+form ::placeholder {
+  color: black;
+  font-weight: 900;
+  font-size: small;
+}
 
 form button {
   background-color:#0065FC;
@@ -114,29 +154,81 @@ form button {
 
 .filter-section {
   display: flex;
-  padding: 10px;
+  padding: 10px 10px 10px 0;
+  align-items: center; /*lines word filter up with the button text*/
 }
 
-.filter-section > p {
+/*styles the word "filtres*/
+.filter-heading {
   font-weight: 900;
-  font-size: small;
-  margin-right: 30px;
+  font-size: 16px;
+  margin-right: 25px;
 }
 
-.filter-icons  {
+/*container for the 4 filter buttons*/
+.filter-buttons-container {
   display: flex;
   justify-content: space-around;
+
 }
 
-.filter-icons i {
-  margin-right: 10px;
+/*filter button serves as container for icon and text combined*/
+.filter-button {
+  display: flex;
+  padding: 0;
+  background: white;
+  outline: none; /*removes default*/
+  border-radius: 4px;
+  font-size: 20px; /*changes icon size*/
+  cursor: pointer;
+  border: 2px;
+  border-style: solid;
+  border-color: #d9d9d9 #d9d9d9 #d9d9d9 white;
+  border-radius: 30px;
+  margin-right: 25px;
 }
 
-.filter-icons > p {
-  font-size: small;
-  margin-right: 30px;
+.filter-button:hover {
+  background: #0065FC;
 }
 
+.filter-button:active {
+  background: green;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  overflow: visible;
+  background: #DEEBFF;
+  border: 2px solid #DEEBFF;
+  border-radius: 50%;
+  outline: 2px solid #DEEBFF;
+}
+
+.filter-icon {
+  color:#0065FC;
+}
+
+.filter-button-text {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  color: black;
+  font-weight: 700;
+  height: 100%; /*centering text*/
+}
+
+.filter-button-text > p {
+  font-size: 18px; /*changes button text size*/
+}
+
+.results-message {
+  display: flex;
+}
 
 /* Section: Hébergements à Marseille et Les plus populaires */
 
@@ -201,13 +293,13 @@ form button {
   padding: 1% 2%;
 }
 
-#show-more {
+.show-more {
   /*afficher plus*/
 }
 
 /* Section: Les plus populaires */
 
-#popular-heading {
+.popular-heading {
   display: flex;
   flex-direction: row;
   align-items: baseline;
@@ -215,12 +307,12 @@ form button {
   padding: 5% 5% 0% 5%;
 }
 
-#popular-heading > .fa-star {
+.popular-heading > .fa-star {
   font-size: 20px;
   margin-left: auto;
 }
 
-#popular-heading > h2 {
+.popular-heading > h2 {
   margin-right: auto;
 }
 
@@ -280,7 +372,33 @@ breakpoint tablette: 768px /// 768px to 991px
   }
 
   nav img {
-    padding-left: 71.625px;
+    margin-left: 28.125px;
+  }
+
+  nav ul li {
+    padding: 25px 25px 5px 25px;
+  }
+
+  .activities-link {
+    padding: 0 15px;
+  }
+
+  nav li {
+    border-top: none;
+    border-bottom: 3px solid #F2F2F2;
+    padding: 0 20px 0 20px;
+  }
+
+  nav li:hover {
+    color: #0065FC;
+    border-top: none;
+    border-bottom: 3px solid #0065FC;
+  }
+  
+  nav li:active {
+    color: #0065FC;
+    border-top: none;
+    border-bottom: 3px solid #0065FC;
   }
 
   .housing-and-popular-section {
@@ -299,8 +417,13 @@ breakpoint tablette: 768px /// 768px to 991px
     align-items: center;
   }
 
-  .housing-cards {
+  .housing-cards-container {
     flex-direction: row;
+    width: 100%;
+  }
+  
+  .housing-cards {
+    flex-direction: column;
   }
 }
 
@@ -313,7 +436,33 @@ breakpoint mobile: <768px /// 0px to 767px
   }
 
   nav img {
-    padding-left: 71.625px;
+    margin-left: 28.125px;
+  }
+
+  nav ul li {
+    padding: 25px 25px 5px 25px;
+  }
+
+  .activities-link {
+    padding: 0 15px;
+  }
+
+  nav li {
+    border-top: none;
+    border-bottom: 3px solid #F2F2F2;
+    padding: 0 20px 10px 20px;
+  }
+
+  nav li:hover {
+    color: #0065FC;
+    border-top: none;
+    border-bottom: 3px solid #0065FC;
+  }
+  
+  nav li:active {
+    color: #0065FC;
+    border-top: none;
+    border-bottom: 3px solid #0065FC;
   }
 
   .housing-and-popular-section {

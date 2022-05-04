@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="TAYLOR_Heather_2_css_042022/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;800&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/64ceb060e1.js" crossorigin="anonymous"></script>
     </head>
 <!--utiliser les balises sémantiques, i.e. main, header, nav, etc. -->
@@ -24,33 +24,61 @@
                         <a href="#">Hébergements</a>
                     </li>
                     <li>
-                        <a href="#activities-section">Activités</a>
+                        <a class="activities-link" href="#activities-section">Activités</a>
                     </li>
                 </ul>
             </nav>
         </header>
         <!-- Main -->
         <main>
-            <section> <!-- Section: Trouvez votre hébergement pour des vacances de rêve -->
+            <section class="search-section"> <!-- Section: Trouvez votre hébergement pour des vacances de rêve -->
                 <div>
                     <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                     <p>En plein centre ville ou en pleine nature</p>
                 </div>
-                <form>
-                    <i class="fa fa-solid fa-location-dot"></i>
-                    <input> <!-- input -->
-                    <button>Rechercher</button> <!--<i class="fa-solid fa-magnifying-glass"></i>-->
+                <form class="form" action="">
+                    <i class="fa fa-solid fa-map-marker-alt"></i>
+                    <input type="text" onfocus="this.placeholder=''" placeholder="Marseille, France" name="search">
+                    <button type="submit">Rechercher</button> <!--<i class="fa-solid fa-magnifying-glass"></i>-->
                 </form>
                 <div class="filter-section">
-                    <p>Filtres</p>
-                    <div class="filter-icons">
-                        <p><i class="fa fa-solid fa-money-bill-wave blue-icon"></i>Économique</p>
-                        <p><i class="fa fa-solid fa-child blue-icon"></i>Familial</p>
-                        <p><i class="fa fa-solid fa-heart blue-icon"></i>Romantique</p>
-                        <p><i class="fa fa-solid fa-dog blue-icon"></i>Animaux autorisés</p>
+                    <p class="filter-heading">Filtres</p>
+                    <div class="filter-buttons-container">
+                        <button type="button" class="filter-button">
+                            <div class="circle">
+                                <i class="fa fa-fw fa-money-bill-wave filter-icon"></i>
+                            </div>
+                            <div class="filter-button-text">
+                                <p>Économique</p>
+                            </div>
+                        </button>
+                        <button type="button" class="filter-button">
+                            <div class="circle">
+                                <i class="fa fa-fw fa-child filter-icon"></i>
+                            </div>
+                            <div class="filter-button-text">
+                                <p>Familial</p>
+                            </div>
+                        </button>
+                        <button type="button" class="filter-button">
+                            <div class="circle">
+                                <i class="fa fa-fw fa-heart filter-icon"></i>
+                            </div>
+                            <div class="filter-button-text">
+                                <p>Romantique</p>
+                            </div>
+                        </button>
+                        <button type="button" class="filter-button">
+                            <div class="circle">
+                                <i class="fa fa-fw fa-dog filter-icon"></i>
+                            </div>
+                            <div class="filter-button-text">
+                                <p>Animaux autorisés</p>
+                            </div>
+                        </button>
                     </div>
                 </div>
-                <div>
+                <div class="results-message">
                     <i class="fa fa-solid fa-info"></i>
                     <p>Plus de 500 logements sont disponsibles dans cette ville</p>
                 </div>
@@ -157,7 +185,7 @@
                                 </article>
                             </div>
                         </div>
-                        <div id="show-more">
+                        <div class="show-more">
                             <p>
                                 <a>Afficher plus</a>
                             </p>
@@ -165,7 +193,7 @@
                     </div>
                 </section>
                 <section class="popular-section"> <!-- Section: Les plus populaires -->
-                        <div id="popular-heading">
+                        <div class="popular-heading">
                             <h2>Les plus populaires</h2>
                             <i class="fa fa-solid fa-star"></i>
                         </div>
