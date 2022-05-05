@@ -32,7 +32,7 @@ nav {
   padding-left: 0px;
   padding-top: 5px;
   margin-top: auto;
-  margin-left: 70px; /*need to change this in media query for other sizes*/
+  margin-left: 3%;
   background-color: white;
   width: 65px;
   height: 35px;
@@ -55,10 +55,6 @@ nav ul {
 
 nav ul li {
   padding: 50px 25px 0px 25px;
-}
-
-.activities-link {
-  padding: 0 15px;
 }
 
 nav li a:link {
@@ -88,11 +84,10 @@ nav li:active {
   border-top: 3px solid #0065FC;
 }
 
-
 /* Main */
 
 main {
-  padding: 0px 35px;
+  padding: 0px 2%;
 }
 
 /* Fonts */
@@ -105,7 +100,7 @@ h1 {
 
 h2 {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 h3 {
@@ -202,7 +197,7 @@ form ::placeholder {
 
 .filter-section {
   display: flex;
-  padding: 10px 10px 10px 0;
+  padding: 10px 0;
   align-items: center; /*lines word filter up with the button text*/
 }
 
@@ -232,7 +227,7 @@ form ::placeholder {
   border-style: solid;
   border-color: #d9d9d9 #d9d9d9 #d9d9d9 white;
   border-radius: 30px;
-  margin-right: 25px;
+  margin-right: 15px;
 }
 
 .filter-button:hover {
@@ -311,12 +306,7 @@ form ::placeholder {
   background-color: #F2F2F2;
   border-radius: 30px;
   display: flex;
-  border: 15px white solid;
-}
-
-.housing-section {
-  flex: 2;
-  flex-direction: column;
+  border: 5px white solid;
 }
 
 .popular-section {
@@ -327,33 +317,55 @@ form ::placeholder {
 
 /* Section: Hébergements à Marseille */
 
-.housing-section-padding {
-  padding: 2.5%;
+.housing-section {
+  flex: 2;
+  flex-direction: column;
+  
+}
+
+.housing-heading {
+  padding: 2% 2% 0 2%;
 }
 
 .housing-cards-container {
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding: 2%;
 }
 
 .housing-cards {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  margin: 2% 0 2% 0;
 }
 
 .card {
   background-color: white;
   border-radius: 15px;
   border: 5px white solid;
-  flex: 1;
-  width: 163px;
-  margin: 2%;
+  min-width: 190px;
+  /*height: 155px;*/
+  box-shadow: 0px 5px 20px #d9d9d9;
+}
+
+.card a {
+  text-decoration: none;
 }
 
 .card-image {
+  height: 90px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image img {
   width: 100%;
-  height: 79px;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
   object-fit: cover;
   border-radius: 15px;
   border-bottom-right-radius: 0px;
@@ -362,10 +374,12 @@ form ::placeholder {
 
 .card-body {
   padding: 1% 2%;
+  text-align: left;
 }
 
 .show-more {
-  /*afficher plus*/
+  padding: 3%;
+  font-weight: bold;
 }
 
 /* Section: Les plus populaires */
@@ -374,8 +388,8 @@ form ::placeholder {
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  width: 100%;
-  padding: 5% 5% 0% 5%;
+  width: 275px;
+  padding: 5% 0;
 }
 
 .popular-heading > .fa-star {
@@ -390,38 +404,62 @@ form ::placeholder {
 .popular-cards {
   display: flex;
   flex-direction: column;
-  padding: 5%;
+
 }
 
 .card-popular {
   background-color: white;
-  display: flex;
-  flex-direction: row;
   border-radius: 15px;
   border: 5px white solid;
-  height: 100px;
+  width: 275px;
+  margin: 0 auto 5% auto;
+  box-shadow: 0px 5px 20px #d9d9d9;
+}
+
+.popular-flex {
+  display: flex;
+  flex-direction: row;
   width: 100%;
-  margin-bottom: 15px;
+}
+
+.card-popular a {
+  text-decoration: none;
 }
 
 .card-image-popular {
-  height: 100%;
-  width: 40%;
+  height: 110px;
+  width: 110px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image-popular img {
+  height: 110px;
+  width: 110px;
+  position: absolute;
+  top: 0%;
+  left: 0%;
   object-fit: cover;
   border-radius: 15px;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
-
 }
+
 
 .card-body-popular {
   padding: 1% 2%;
-  height: 100%;
+  width: 155px;
   display: flex;
   flex-direction: column;
+  
 }
 
-.card-body-popular > span {
+/*.card-body {
+  padding: 1% 2%;
+  text-align: left;
+}*/
+
+.card-body-popular > .card-rating {
   margin-top: auto;
 }
 
@@ -438,9 +476,9 @@ breakpoint tablette: 768px /// 768px to 991px
 */
 
 @media (min-width: 768px) and (max-width: 991px) {	
-  main {
+  /*main {
     padding: 0px 0px;
-  }
+  }*/
 
   .desktop-button {
     display: none;
@@ -498,24 +536,26 @@ breakpoint mobile: <768px /// 0px to 767px
   nav {
     flex-direction: column;
     align-items: center;
+    padding: 0;
   }
 
   .logo-container {
     padding-top: 15px;
     margin-bottom: 20px;
-    margin-left: 20px;
   }
 
   .logo {
     margin-left: 0px;
   }
 
-  nav ul li {
-    padding: 25px 25px 5px 25px;
+  nav ul {
+    width: 100%;
   }
 
-  .activities-link {
-    padding: 0 25px;
+  nav ul li {
+    padding: 25px 0px 5px 0px;
+    width: 50%;
+    text-align: center;
   }
 
   nav li {
@@ -534,10 +574,6 @@ breakpoint mobile: <768px /// 0px to 767px
     color: #0065FC;
     border-top: none;
     border-bottom: 3px solid #0065FC;
-  }
-
-  main {
-    padding: 0px 0px;
   }
 
   .desktop-button {
@@ -564,7 +600,7 @@ breakpoint mobile: <768px /// 0px to 767px
   }
   
   .housing-and-popular-section {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .housing-section {
@@ -581,9 +617,11 @@ breakpoint mobile: <768px /// 0px to 767px
   .housing-cards {
     flex-direction: column;
     align-items: center;
+    margin: 0%;
   }
 
   .card {
-    width: 100%;
+    width: 90%;
+    margin-bottom: 2%;
   }
 }
