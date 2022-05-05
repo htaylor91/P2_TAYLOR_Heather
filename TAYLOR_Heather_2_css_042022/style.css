@@ -320,7 +320,6 @@ form ::placeholder {
 .housing-section {
   flex: 2;
   flex-direction: column;
-  
 }
 
 .housing-heading {
@@ -504,7 +503,7 @@ breakpoint tablette: 768px /// 768px to 991px
   }
 
   .housing-and-popular-section {
-    flex-direction: row;
+    flex-direction: column-reverse;
   }
   
   .housing-section {
@@ -520,13 +519,9 @@ breakpoint tablette: 768px /// 768px to 991px
   }
 
   .housing-cards-container {
-    flex-direction: row;
     width: 100%;
   }
   
-  .housing-cards {
-    flex-direction: column;
-  }
 }
 
 /*
@@ -606,6 +601,7 @@ breakpoint mobile: <768px /// 0px to 767px
   .housing-section {
     flex: 1;
     flex-direction: column;
+    background-color: white;
   }
     
   .popular-section {
