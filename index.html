@@ -81,12 +81,8 @@
                                             alt="room at Auberge La Cannebière">
                                         </div>
                                         <div class="card-body">
-                                            <div class="card-title">
-                                                <h3>Auberge La Cannebière</h3>
-                                            </div>
-                                            <div class="card-subtitle">
-                                                <h4>Nuit à partir de 25€</h4>
-                                            </div>
+                                            <h3 class="card-title">Auberge La Cannebière</h3>
+                                            <h4 class="card-subtitle">Nuit à partir de <span data-price="25€">25</span></h4>
                                             <div class="card-rating">
                                                 <i class="fa fa-solid fa-star checked-star"></i>
                                                 <i class="fa fa-solid fa-star checked-star"></i>
@@ -108,7 +104,7 @@
                                                 <h3>Hôtel du port</h3>
                                             </div>
                                             <div class="card-subtitle">
-                                                <h4>Nuit à partir de 52€</h4>
+                                                <h4>Nuit à partir de <span data-price="52€">52</span></h4>
                                             </div>
                                             <div class="card-rating">
                                                 <i class="fa fa-solid fa-star checked-star"></i>
@@ -131,7 +127,7 @@
                                                 <h3>Hôtel Les mouettes</h3>
                                             </div>
                                             <div class="card-subtitle">
-                                                <h4>Nuit à partir de 76€</h4>
+                                                <h4>Nuit à partir de <span data-price="76€">76</span></h4>
                                             </div>
                                             <div class="card-rating">
                                                 <i class="fa fa-solid fa-star checked-star"></i>
@@ -156,7 +152,7 @@
                                                 <h3>Hôtel de la mer</h3>
                                             </div>
                                             <div class="card-subtitle">
-                                                <h4>Nuit à partir de 46€</h4>
+                                                <h4>Nuit à partir de <span data-price="46€">46</span></h4>
                                             </div>
                                             <div class="card-rating">
                                                 <i class="fa fa-solid fa-star checked-star"></i>
@@ -179,7 +175,7 @@
                                                 <h3>Auberge Le Panier</h3>
                                             </div>
                                             <div class="card-subtitle">
-                                                <h4>Nuit à partir de 23€</h4>
+                                                <h4>Nuit à partir de <span data-price="23€">23</span></h4>
                                             </div>
                                             <div class="card-rating">
                                                 <i class="fa fa-solid fa-star checked-star"></i>
@@ -202,7 +198,7 @@
                                                 <h3>Hôtel chez Amina</h3>
                                             </div>
                                             <div class="card-subtitle">
-                                                <h4>Nuit à partir de 96€</h4>
+                                                <h4>Nuit à partir de <span data-price="96€">96</span></h4>
                                             </div>
                                             <div class="card-rating">
                                                 <i class="fa fa-solid fa-star checked-star"></i>
@@ -217,9 +213,7 @@
                             </div>
                         </div>
                         <div class="show-more">
-                            <p>
                                 <a>Afficher plus</a>
-                            </p>
                         </div>
                 </section>
                 <section class="popular-section"> <!-- Section: Les plus populaires -->
@@ -240,7 +234,7 @@
                                         <h3>Hôtel Le soleil du matin</h3>
                                     </div>
                                     <div class="card-subtitle">
-                                        <h4>Nuit à partir de 128€</h4>
+                                        <h4>Nuit à partir de <span data-price="128€">128</span></h4>
                                     </div>
                                     <div class="card-rating">
                                         <i class="fa fa-solid fa-star checked-star"></i>
@@ -265,7 +259,7 @@
                                         <h3>Au cœur de l'eau Chambres d'hôtes</h3>
                                     </div>
                                     <div class="card-subtitle">
-                                        <h4>Nuit à partir de 71€</h4>
+                                        <h4>Nuit à partir de <span data-price="71€">71</span></h4>
                                     </div>
                                     <div class="card-rating">
                                         <i class="fa fa-solid fa-star checked-star"></i>
@@ -290,7 +284,7 @@
                                         <h3>Hôtel Tout bleu et Blanc</h3>
                                     </div>
                                     <div class="card-subtitle">
-                                        <h4>Nuit à partir de 68€</h4>
+                                        <h4>Nuit à partir de <span data-price="68€">68</span></h4>
                                     </div>
                                     <div class="card-rating">
                                         <i class="fa fa-solid fa-star checked-star"></i>
@@ -306,81 +300,83 @@
                     </div>
                 </section>  
             </div>
-            <!-- Section: Activités à Marseille -->
+
+            <!--Activities section-->
+
             <section id="activities-section">
-                <div>
+                <div class="activities-heading">
                     <h2>Activités à Marseille</h2>
                 </div>
                 <div class="activities">
-                    <div class="activities-one-card">
-                        <article>
-                            <a href="#">
-                                <div>
+                    <div class="activities-column">
+                        <article class="card-activity x-large">
+                            <a href="#" class="card-activity-contents x-large">
+                                <div class="card-image-activity grow">
                                     <img src="./TAYLOR_Heather_3_images_042022/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"
                                     alt="Vieux Port">
                                 </div>
-                                <div>
+                                <div class="card-title-activity">
                                     <h3>Vieux Port</h3>
                                 </div>
                             </a>
                         </article>
                     </div>
-                    <div class="activities-two-cards">
-                        <article>
-                            <a href="#">
-                                <div>
+                    <div class="activities-column">
+                        <article class="card-activity">
+                            <a href="#" class="card-activity-contents large">
+                                <div class="card-image-activity">
                                     <img src="./TAYLOR_Heather_3_images_042022/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg"
                                 alt="Fort de Pomègues">
                                 </div>
-                                <div>
+                                <div class="card-title-activity">
                                     <h3>Fort de Pomègues</h3>
                                 </div>
                             </a>
                         </article>
-                        <article>
-                            <a href="#">
-                                <div>
+                        <article class="card-activity">
+                            <a href="#" class="card-activity-contents x-small">
+                                <div class="card-image-activity">
                                     <img src="./TAYLOR_Heather_3_images_042022/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg"
                                 alt="Îles du Frioul">
                                 </div>
-                                <div>
+                                <div class="card-title-activity">
                                     <h3>Îles du Frioul</h3>
                                 </div>
                             </a>
                         </article>
                     </div>
-                    <div class="activities-one-card">      
-                        <article>
-                            <a href="#">
-                                <div>
+                    <div class="activities-column">      
+                        <article class="card-activity x-large">
+                            <a href="#" class="card-activity-contents x-large">
+                                <div class="card-image-activity grow">
                                     <img src="./TAYLOR_Heather_3_images_042022/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
                                     alt="Parc National des Calanques">
                                 </div>
-                                <div>
+                                <div class="card-title-activity">
                                     <h3>Parc National des Calanques</h3>
                                 </div>
                             </a>
                         </article>
                     </div>
-                    <div class="activities-two-cards">
-                        <article>
-                            <a href="#">
-                                <div>
+                    <div class="activities-column">
+                        <article class="card-activity">
+                            <a href="#" class="card-activity-contents small">
+                                <div class="card-image-activity">
                                     <img src="./TAYLOR_Heather_3_images_042022/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"
                                     alt="Notre-Dame-de-la-Garde">
                                 </div>
-                                <div>
+                                <div class="card-title-activity">
                                     <h3>Notre-Dame-de-la-Garde</h3>
                                 </div>
                             </a>
                         </article>
-                        <article>
-                            <a href="#">
-                                <div>
+                        <article class="card-activity">
+                            <a href="#" class="card-activity-contents medium">
+                                <div class="card-image-activity">
                                     <img src="./TAYLOR_Heather_3_images_042022/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg"
                                     alt="Parc Longchamp">
                                 </div>
-                                <div>
+                                <div class="card-title-activity">
                                     <h3>Parc Longchamp</h3>
                                 </div>
                             </a>
@@ -388,29 +384,30 @@
                     </div>  
                 </div>
             </section> 
+ 
         </main>
         <!-- Footer -->
         <footer>
             <div>
                 <p>A propos</p>
                 <ul>
-                    <li><a>Fonctionnement du site</a></li>
-                    <li><a>Conditions générales de vente</a></li>
-                    <li><a>Données et confidentialité</a></li>
+                    <li><a href="#">Fonctionnement du site</a></li>
+                    <li><a href="#">Conditions générales de vente</a></li>
+                    <li><a href="#">Données et confidentialité</a></li>
                 </ul>
             </div>
             <div>
                 <p>Nos hébergements</p>
                 <ul>
-                    <li><a>Charte qualité</a></li>
-                    <li><a>Soumettre votre hôtel</a></li>
+                    <li><a href="#">Charte qualité</a></li>
+                    <li><a href="#">Soumettre votre hôtel</a></li>
                 </ul>
             </div>
             <div>
                 <p>Assistance</p>
                 <ul>
-                    <li><a>Centre d'aide</a></li>
-                    <li><a>Nous contacter</a></li>
+                    <li><a href="#">Centre d'aide</a></li>
+                    <li><a href="#">Nous contacter</a></li>
                 </ul>
             </div>
         </footer>
