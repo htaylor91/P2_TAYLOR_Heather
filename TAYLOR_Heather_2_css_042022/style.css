@@ -21,7 +21,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 10px 0px 10px;
 }
 
 .logo-container {
@@ -55,6 +54,8 @@ nav ul li {
 }
 
 nav li a:link {
+  font-size: 14.5px;
+  font-weight: 500;
   text-decoration: none;
   color: black;
 }
@@ -84,7 +85,7 @@ nav li:active {
 /* Main */
 
 main {
-  padding: 0px 2%;
+  padding: 0px 1%;
 }
 
 main a:link {
@@ -108,19 +109,20 @@ main a:active {
 /* Fonts */
 
 h1 {
-  font-weight: 625;
-  font-size: 22px;
+  font-weight: 750;
+  font-size: 20px;
   margin: 0 0 8px 0;
 }
 
 h2 {
-  font-weight: bold;
+  font-weight: 750;
   font-size: 20px;
 }
 
 h3 {
-  font-weight: bolder;
-  font-size: 14px;
+  padding-top: 5px;
+  font-weight: 750; /*was 800*/
+  font-size: 14.5px;
   margin: 0%;
 }
 
@@ -156,6 +158,10 @@ p {
   font-size: 10px;
 }
 
+.card-rating {
+  display: flex;
+}
+
 .checked-star {
   color:#0065FC;
 }
@@ -168,7 +174,7 @@ p {
 
 .search-section {
   margin-top: 50px;
-  margin-left: 20px;
+  padding: 0 5px;
 }
 
 /* Form */
@@ -178,7 +184,7 @@ form {
 }
 
 .map-icon {
-  font-size: 18px;
+  font-size: 16px; /*18px*/
   background-color: #F2F2F2;
   padding: 12.5px 16px 13px 16px;
   border: none;
@@ -189,7 +195,7 @@ form {
 form input {
   position: relative;
   right: 5px;
-  font-size: 18px;
+  font-size: 16px; /*18px*/
   background-color: white;
   border-top: 1px solid #F2F2F2;
   border-bottom: 1px solid #F2F2F2;
@@ -200,8 +206,8 @@ form input {
 
 form ::placeholder {
   color: black;
-  font-weight: 900;
-  font-size: 18px;
+  font-weight: 750; /*900*/
+  font-size: 16px; /*18px*/
 }
 
 .desktop-button, .mobile-button {
@@ -210,7 +216,7 @@ form ::placeholder {
   background-color:#0065FC;
   color: white;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px; /*18px*/
   border: none;
   border-radius: 0 14px 14px 0;
   padding: 13px;
@@ -233,9 +239,9 @@ form ::placeholder {
 }
 
 .filter-heading {
-  font-weight: 900;
-  font-size: 18px;
-  margin-right: 25px;
+  font-weight: 750;
+  font-size: 16px;
+  margin-right: 30px;
 }
 
 /*container for the 4 filter buttons*/
@@ -257,7 +263,7 @@ form ::placeholder {
   border-style: solid;
   border-color: #d9d9d9 #d9d9d9 #d9d9d9 white;
   border-radius: 30px;
-  margin-right: 15px;
+  margin-right: 20px;
 }
 
 .filter-button:hover {
@@ -272,8 +278,8 @@ form ::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 45px;
-  width: 45px;
+  height: 40px;
+  width: 40px;
   overflow: visible;
   background: #DEEBFF;
   border: 2px solid #DEEBFF;
@@ -292,14 +298,12 @@ form ::placeholder {
   color: black;
   font-weight: 700;
   height: 100%; /*centering text*/
+  font-size: 16px; /*changes button text size*/
+  font-weight: 750;
 }
 
 .filter-button-text:active {
   color: white;
-}
-
-.filter-button-text {
-  font-size: 18px; /*changes button text size*/
 }
 
 .results-container {
@@ -324,6 +328,7 @@ form ::placeholder {
   display: flex;
   align-items: center;
   margin-left: 10px;
+  font-size: 14px;
 }
 
 /* Section: Hébergements à Marseille et Les plus populaires */
@@ -331,6 +336,7 @@ form ::placeholder {
 .housing-and-popular-section {
   display: flex;
   gap: 1%;
+  padding: 0 5px;
 }
 
 .housing-section, .popular-section {
@@ -371,6 +377,24 @@ form ::placeholder {
   border: 5px white solid;
   box-shadow: 0px 5px 20px #d9d9d9;
   flex: 1 0 190px; /*grow, shrink, basis*/
+  position: relative;
+}
+
+.card a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  box-shadow: 0 5px 20px #0065FC;
+  border-radius: 15px;
+  transition: opacity 1s ease;
+}
+
+.card a:hover::after {
+  opacity: 0.4;
 }
 
 .card a {
@@ -402,8 +426,12 @@ form ::placeholder {
 
 .show-more {
   padding: 30px 15px;
-  font-weight: bold;
+  font-weight: 750;
   font-size: 18px;
+}
+
+.show-more a {
+  text-decoration: none;
 }
 
 /* Section: Les plus populaires */
@@ -436,7 +464,7 @@ form ::placeholder {
   flex-direction: column;
   flex-grow: 1;
   justify-content: space-around;
-  padding: 0 5%; /* adjust to match heading*/
+  padding: 0 15px;
 }
 
 .card-popular {
@@ -444,7 +472,26 @@ form ::placeholder {
   border-radius: 15px;
   border: 5px white solid;
   box-shadow: 0px 5px 20px #d9d9d9;
+  position: relative;
 }
+
+.card-popular a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  box-shadow: 0 5px 20px #0065FC;
+  border-radius: 15px;
+  transition: opacity 1s ease;
+}
+
+.card-popular a:hover::after {
+  opacity: 0.5;
+}
+
 
 .popular-flex {
   display: flex;
@@ -457,15 +504,15 @@ form ::placeholder {
 }
 
 .card-image-popular {
-  height: 110px;
-  width: 110px;
+  height: 120px;
+  width: 120px;
   position: relative;
   overflow: hidden;
 }
 
 .card-image-popular img {
-  height: 110px;
-  width: 110px;
+  height: 120px;
+  width: 120px;
   position: absolute;
   top: 0%;
   left: 0%;
@@ -487,16 +534,22 @@ form ::placeholder {
   margin-top: auto;
 }
 
-.card-title, .card-subtitle {
+.card-title {
   margin-bottom: 5px;
 }
 
+.card-subtitle {
+  margin-bottom: 10px;
+}
+
+
 /* Section: Activités à Marseille */
 
-#activities-section {
+.activities-section {
   display: flex;
   flex-direction: column;
   margin: 2% 0;
+  padding: 0 5px;
 }
 
 .activities-heading {
@@ -515,13 +568,33 @@ form ::placeholder {
   justify-content: space-between;
   min-height: 400px;
   width: 23%;
+  gap: 30px;
 }
 
 /*the article card; container for a */
 .card-activity {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
+
+.card-activity a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  box-shadow: 0 5px 20px #0065FC;
+  border-radius: 20px;
+  transition: opacity 1s ease;
+}
+
+.card-activity a:hover::after {
+  opacity: 0.5;
+}
+
 
 /*a link, holds both image and text divs*/
 .card-activity-contents {
@@ -537,22 +610,21 @@ x-large is applied to both a tag and article tag*/
 } /*100%*/ /*1, 4*/
 
 .large {
-  height: 220px;
-} /*53%*/ /*2*/ 
+  height: 217.5px;
+} /*55%*/ /*2*/ 
 
 
 .medium {
-  height: 196px;
-} /*47%*/ /*6*/
+  height: 196.5px;
+} /*49%*/ /*6*/
 
 .small {
-  height: 184px;
-} /*44%*/ /*5*/
+  height: 186px;
+} /*46%*/ /*5*/
 
 .x-small {
-  height: 156px;
-} /*37%*/ /*3*/
-
+  height: 161.5px;
+} /*39%*/ /*3*/
 
 /* parent container for activity image */
 .card-image-activity {
@@ -584,7 +656,7 @@ x-large is applied to both a tag and article tag*/
 }
 
 .card-title-activity h3 {
-  padding: 10px;
+  padding-left: 10px;
 }
 
 /********** Footer **********/
@@ -601,8 +673,8 @@ footer div {
 }
 
 footer p {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 15px;
+  font-weight: 750;
   margin-bottom: 20px;
 }
 
@@ -645,13 +717,14 @@ Media queries
 /*large breakpoint - up to 1920px by 1080px*/
 @media (min-width: 1280px) {
 
-  .housing-cards {
-    margin-top: 0;
+  .housing-and-popular-section {
+    gap: 5%;
   }
 
-  footer {
-    background-color: blueviolet;
+  .housing-section, .popular-section {
+    padding: 10px;
   }
+
 }
 
 /*x-small breakpoint for the form*/
@@ -665,12 +738,8 @@ breakpoint tablette: 768px /// 768px to 991px
 
 @media (min-width: 768px) and (max-width: 991px) {	
 
-  .desktop-button {
-    display: none;
-  }
-
-  .mobile-button {
-    display: inline-flex;
+  .search-section {
+    padding: 15px;
   }
 
   .filter-section {
@@ -695,16 +764,64 @@ breakpoint tablette: 768px /// 768px to 991px
   .housing-section {
     flex: 1;
     flex-direction: column;
-    align-items: center;
+  }
+
+  .housing-cards-container {
+    width: 100%;
   }
     
   .popular-section {
     flex-direction: column;
     align-items: stretch; /*changed from center*/
+    background-color: white;
+    margin-bottom: 20px;
   }
 
-  .housing-cards-container {
+  .popular-heading {
+    padding-top: 0;
+  }
+
+  .popular-cards {
+    flex-direction: row;
+    gap: 1%;
+    padding:0;
+  }
+
+  .card-popular {
+    flex: 1;
+  }
+
+  .card-body-popular {
+    padding: 1% 1% 1% 5%;
+  }
+
+  .activities-section {
+    padding: 15px;
+  }
+
+  .activities-heading {
+    padding-top: 0;
+  }
+
+  .activities {
+    display: flex;
     width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .activities-column {
+    min-height: auto;
+    width: 48%;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .card-activity {
+    margin-bottom: 5%;
+  }
+
+  .card-activity-contents {
+    height: 210px;
   }
   
 }
@@ -733,7 +850,7 @@ breakpoint mobile: <768px /// 0px to 767px
   }
 
   nav ul li {
-    padding: 25px 0px 5px 0px;
+    padding: 40px 0px 10px 0px;
     width: 50%;
     text-align: center;
   }
@@ -756,16 +873,26 @@ breakpoint mobile: <768px /// 0px to 767px
     border-bottom: 3px solid #0065FC;
   }
 
+  nav li a:link {
+    font-size: 16px;
+  }
+
   main {
     padding: 0;
   }
 
   .search-section {
     margin-top: 30px;
+    padding: 0 0 0 5%;
   }
 
   h1 {
-    margin: 0 8px 8px 0;
+    font-size: 22px;
+    margin: 0 10px 15px 0;
+  }
+
+  h1 + p {
+    font-size: 16px;
   }
 
   h2 {
@@ -775,6 +902,30 @@ breakpoint mobile: <768px /// 0px to 767px
   h3 {
     font-size: 16px;
   }
+
+  /*Mobile Form*/
+
+  form {
+    margin: 40px 0 30px 0;
+  }*/
+  
+  .map-icon {
+    font-size: 18px;
+  }
+  
+  form input {
+    font-size: 18px; /*18px*/
+  }
+  
+  form ::placeholder {
+    font-size: 18px;
+  }
+  
+  /*.desktop-button, .mobile-button {
+
+    font-size: 18px;
+
+  }*/
 
   .desktop-button {
     display: none;
@@ -789,6 +940,10 @@ breakpoint mobile: <768px /// 0px to 767px
     align-items: flex-start;
   }
 
+  .filter-heading {
+    font-size: 18px;
+  }
+
   .filter-buttons-container {
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -797,14 +952,35 @@ breakpoint mobile: <768px /// 0px to 767px
   .filter-button {
     margin-right: 10px;
     margin-top: 10px;
+    margin-bottom: 4px;
   }
 
-  .filter-button-text {
+  .circle {
+    height: 45px;
+    width: 45px;
+  }
+
+  .results-container {
+    margin: 15px 0 20px 0;
+  }
+
+  .results-icon {
+    font-size: 12px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .results-message {
+    width: 90%;
+  }
+
+  .results-message p {
     font-size: 16px;
   }
   
   .housing-and-popular-section {
     flex-direction: column-reverse;
+    padding: 0px;
   }
 
   .housing-section {
@@ -827,13 +1003,19 @@ breakpoint mobile: <768px /// 0px to 767px
     align-items: stretch; /*changed from center*/
     border: none;
     border-radius: 0;
+    margin-top: 5px;
+    padding-bottom: 30px;
   }
 
   .popular-heading, .housing-heading, .activities-heading {
-    padding: 30px 0px 15px 0px;
+    padding: 30px 0px 30px 0px;
     width: 90%;
     align-self: center;
     font-size: 22px;
+  }
+
+  .popular-heading {
+    padding-top: 40px;
   }
 
   .popular-cards {
@@ -844,18 +1026,18 @@ breakpoint mobile: <768px /// 0px to 767px
 
   .card-popular {
     width: 90%;
-    margin-bottom: 2%;
+    margin-bottom: 4%;
     align-self: center;
   }
 
   .card-image-popular {
-    height: 125px;
-    width: 125px;
+    height: 130px;
+    width: 130px;
   }
   
   .card-image-popular img {
-    height: 125px;
-    width: 125px;
+    height: 130px;
+    width: 130px;
   }
 
   .housing-cards {
@@ -866,12 +1048,20 @@ breakpoint mobile: <768px /// 0px to 767px
 
   .card {
     width: 90%;
-    margin-bottom: 2%;
+    margin-bottom: 3.5%;
     flex: 0;
   }
 
+  .card-body {
+    padding: 2% 2% 1% 2%;
+  }
+
   .card-image {
-    height: 120px;
+    height: 110px;
+  }
+
+  .activities-section {
+    margin: 2% 0 7% 0;
   }
 
   .activities {
@@ -884,18 +1074,36 @@ breakpoint mobile: <768px /// 0px to 767px
   .activities-column {
     min-height: auto;
     width: 90%;
+    gap: 0;
   }
 
   .card-activity {
-    margin-bottom: 5%;
+    margin-bottom: 8%;
   }
 
   .card-activity-contents {
-    height: 210px;
+    height: 190px;
+  }
+
+  .card-title-activity {
+    min-height: 55px;
   }
 
   footer {
     flex-direction: column;
+    padding-top: 35px;
     padding-left: 20px;
+  }
+
+  footer div {
+    margin: 3% 2% 8% 2%;
+  }
+
+  footer p {
+    font-size: 18px;
+  }
+
+  footer a:link {
+    font-size: 15.75px;
   }
 }
