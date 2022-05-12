@@ -735,10 +735,10 @@ Media queries
 */
 
 /*
-breakpoint x-large desktop: 1080px & above
+breakpoint x-large desktop: 1280px & above
 ---------------------------------------------------------*/
 
-@media (min-width: 1080px) {
+@media (min-width: 1280px) {
   .housing-section, .popular-section {
     padding-left: 2%;
     padding-right: 2%; 
